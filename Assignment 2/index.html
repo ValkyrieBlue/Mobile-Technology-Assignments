@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>var __basePath = '/';</script>
+    <style media="only screen">
+        html, body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            box-sizing: border-box;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        html {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 0;
+            overflow: auto;
+        }
+
+        body {
+            padding: 1rem;
+            overflow: auto;
+        }
+    </style>
+            <script src="https://unpkg.com/@ag-grid-enterprise/all-modules@23.0.2/dist/ag-grid-enterprise.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="outer">
+  <div class="grid-col">
+    <div id="myGrid" class="ag-theme-alpine"></div>
+  </div>
+
+  <div class="drop-col" ondragover="onDragOver(event)" ondrop="onDrop(event)">
+    <span id="eDropTarget" class="drop-target">
+      ==> Drop to here
+    </span>
+    <div id="eJsonDisplay" class="json-display"></div>
+  </div>
+</div>
+
+    <script src="dragSourceRenderer.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
